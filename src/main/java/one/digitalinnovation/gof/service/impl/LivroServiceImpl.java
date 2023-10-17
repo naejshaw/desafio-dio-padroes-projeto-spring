@@ -10,6 +10,7 @@ import one.digitalinnovation.gof.model.LivroRepository;
 import one.digitalinnovation.gof.model.Autor;
 import one.digitalinnovation.gof.model.AutorRepository;
 import one.digitalinnovation.gof.service.LivroService;
+import one.digitalinnovation.gof.service.GeneroService;
 
 
 @Service
@@ -18,6 +19,8 @@ public class LivroServiceImpl implements LivroService {
 	private LivroRepository livroRepository;
 	@Autowired
 	private AutorRepository autorRepository;
+	@Autowired
+	private GeneroService generoService;
 
 	@Override
 	public Iterable<Livro> buscarTodos() {
@@ -51,7 +54,7 @@ public class LivroServiceImpl implements LivroService {
 	private void salvarLivroComGenero(Livro livro) {
 		String genero = livro.getAutor().getGenero();
 		Autor autor = autorRepository.findById(genero).orElseGet(() -> {
-			Autor novoAutor = new Autor();
+			Autor novoAutor = generoService.consultarGenero(genero);
 			autorRepository.save(novoAutor);
 			return novoAutor;
 		});
