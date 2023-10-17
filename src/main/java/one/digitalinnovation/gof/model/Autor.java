@@ -13,7 +13,7 @@ public class Autor {
 	private String nacionalidade;
 	private Integer anoPublicacao;
 
-	public Integer getAnoPublicacao() {
+    public Integer getAnoPublicacao() {
 		return anoPublicacao;
 	}
 	public void setAnoPublicacao(Integer anoPublicacao) {
