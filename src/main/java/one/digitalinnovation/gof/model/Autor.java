@@ -11,12 +11,12 @@ public class Autor {
 	private String nome;
 	private String sobrenome;
 	private String nacionalidade;
-	private Long anoPublicacao;
+	private Integer anoPublicacao;
 
-	public Long getAnoPublicacao() {
+	public Integer getAnoPublicacao() {
 		return anoPublicacao;
 	}
-	public void setAnoPublicacao(Long anoPublicacao) {
+	public void setAnoPublicacao(Integer anoPublicacao) {
 		this.anoPublicacao = anoPublicacao;
 	}
 	public String getGenero() {
