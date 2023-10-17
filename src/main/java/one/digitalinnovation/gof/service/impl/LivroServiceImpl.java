@@ -7,10 +7,10 @@ import org.springframework.stereotype.Service;
 
 import one.digitalinnovation.gof.model.Livro;
 import one.digitalinnovation.gof.model.LivroRepository;
+import one.digitalinnovation.gof.service.GeneroService;
+import one.digitalinnovation.gof.service.LivroService;
 import one.digitalinnovation.gof.model.Autor;
 import one.digitalinnovation.gof.model.AutorRepository;
-import one.digitalinnovation.gof.service.LivroService;
-import one.digitalinnovation.gof.service.GeneroService;
 
 
 @Service
